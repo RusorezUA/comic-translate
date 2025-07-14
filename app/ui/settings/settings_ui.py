@@ -46,7 +46,7 @@ class SettingsPageUI(QtWidgets.QWidget):
                                     self.tr("Microsoft Translator"), self.tr("Deepseek-v3"), self.tr("Custom"),]
         
         self.languages = ['English', '한국어', 'Français', '日本語', 
-         '简体中文', '繁體中文', 'русский', 'Deutsch', 
+         '简体中文', '繁體中文', 'Українська', 'Deutsch', 
          'Nederlands', 'Español', 'Italiano', 'Türkçe']
         
         self.nav_cards = []  
@@ -60,7 +60,7 @@ class SettingsPageUI(QtWidgets.QWidget):
             "日本語": "日本語",
             "简体中文": "简体中文",
             "繁體中文": "繁體中文",
-            "русский": "русский",
+            "Українська": "Українська",
             "Deutsch": "Deutsch",
             "Nederlands": "Nederlands",
             "Español": "Español",
@@ -807,6 +807,3 @@ class SettingsPageUI(QtWidgets.QWidget):
         font_metrics = QFontMetrics(label.font())
         text_width = font_metrics.horizontalAdvance(label.text())
         label.setFixedWidth(text_width + padding)
-
-
-
