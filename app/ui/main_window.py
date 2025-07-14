@@ -34,14 +34,14 @@ font_folder_path = os.path.join(project_root, 'fonts')
 
 supported_source_languages = [
 "Korean", "Japanese", "French", "Chinese", "English",
-"Russian", "German", "Dutch", "Spanish", "Italian"
+"Ukrainian", "German", "Dutch", "Spanish", "Italian"
 ]
 
 supported_target_languages = [
 "English", "Korean", "Japanese", "French", "Simplified Chinese",
-"Traditional Chinese", "Russian", "German", "Dutch", "Spanish", 
+"Traditional Chinese", "German", "Dutch", "Spanish", 
 "Italian", "Turkish", "Polish", "Portuguese", "Brazilian Portuguese",
-"Thai", "Vietnamese", "Hungarian", "Indonesian",  "Finnish",
+"Thai", "Vietnamese", "Hungarian", "Indonesian",  "Finnish", "Ukrainian",
 "Arabic"]
 
 
@@ -81,7 +81,6 @@ class ComicTranslateUI(QtWidgets.QMainWindow):
             self.tr("Simplified Chinese"): "Simplified Chinese",
             self.tr("Traditional Chinese"): "Traditional Chinese",
             self.tr("Chinese"): "Chinese",
-            self.tr("Russian"): "Russian",
             self.tr("German"): "German",
             self.tr("Dutch"): "Dutch",
             self.tr("Spanish"): "Spanish",
@@ -95,6 +94,7 @@ class ComicTranslateUI(QtWidgets.QMainWindow):
             self.tr("Indonesian"): "Indonesian",
             self.tr("Hungarian"): "Hungarian",
             self.tr("Finnish"): "Finnish",
+            self.tr("Ukrainian"): "Ukrainian",
             self.tr("Arabic"): "Arabic",
         }
         # Create reverse mapping
@@ -271,7 +271,8 @@ class ComicTranslateUI(QtWidgets.QMainWindow):
         self.automatic_radio.setChecked(True)
         self.automatic_radio.setFocusPolicy(QtCore.Qt.FocusPolicy.NoFocus)
 
-        self.translate_button = MPushButton(self.tr("Translate All"))
+        # МОДИФІКАЦІЯ 3: Змінено текст кнопки для відповідності файлу перекладу
+        self.translate_button = MPushButton(self.tr("Translate"))
         self.translate_button.setEnabled(True)
         self.translate_button.setFocusPolicy(QtCore.Qt.FocusPolicy.NoFocus)
         self.cancel_button = MPushButton(self.tr("Cancel"))
@@ -738,5 +739,3 @@ class ComicTranslateUI(QtWidgets.QMainWindow):
         
     def set_font(self, font_family: str):
         self.font_dropdown.setCurrentFont(font_family)
-        
-
