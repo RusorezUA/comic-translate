@@ -58,7 +58,7 @@ def get_system_language():
         'ko': '한국어',
         'fr': 'Français',
         'ja': '日本語',
-        'ru': 'русский',
+        'uk': 'Українська',
         'de': 'Deutsch',
         'nl': 'Nederlands',
         'es': 'Español',
@@ -77,7 +77,7 @@ def load_translation(app, language: str):
         '日本語': 'ja',
         '简体中文': 'zh_CN',
         '繁體中文': 'zh_TW',
-        'русский': 'ru',
+        'Українська': 'uk',
         'Deutsch': 'de',
         'Nederlands': 'nl',
         'Español': 'es',
@@ -98,4 +98,3 @@ def load_translation(app, language: str):
 
 if __name__ == "__main__":
     main()
-
